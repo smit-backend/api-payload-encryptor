@@ -1,0 +1,28 @@
+{
+    "name": "smit-backend/api-payload-encryptor",
+    "description": "Transparent field-level encryption for database columns and API payloads utilizing AES-256-GCM envelope encryption and KMS integration.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "smit-backend",
+            "email": "sync2sale@gmail.com",
+            "homepage": "https://github.com/smit-backend"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "SmitBackend\\FieldCrypto\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SmitBackend\\FieldCrypto\\PackageServiceProvider"
+            ]
+        }
+    }
+}
